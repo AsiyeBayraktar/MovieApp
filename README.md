@@ -14,13 +14,13 @@
 
 ##  MySQL Tables:
 
- `users` :    (primary key)  user_id , username, password , enabled
- `roles` :   (primary key) role_id, name
+ `users` :    (primary key)  user_id , username, password , enabled /
+ `roles` :   (primary key) role_id, name /
  `users_roles` : (primary key) user_id, (foreign key) role_id
  
 
- Permission Details:
- ADMIN  :    View, Create,Edit and Delete Movies and Actors
+ Permission Details: /
+ ADMIN  :    View, Create,Edit and Delete Movies and Actors/
  USER   :    View , Edit and Create Movies and Actors
  
  
