@@ -14,8 +14,8 @@
 
 ##  MySQL Tables:
 
- `users` :    (primary key)  user_id , username, password , enabled /
- `roles` :   (primary key) role_id, name /
+ `users` :    (primary key)  user_id , username, password , enabled/
+ `roles` :   (primary key) role_id, name/
  `users_roles` : (primary key) user_id, (foreign key) role_id
  
 
@@ -27,7 +27,7 @@
   There can be more than one actor in a movie.
  So used **One-To-Many**  relationship between movie and actor table.
  
-  `actor` :    (primary key)  id , name, role , (foreign key) movie_id
+  `actor` :    (primary key)  id , name, role , (foreign key) movie_id/
    `movie` :    (primary key)  id ,name, year, type, explanation, media, language
    
 
@@ -46,7 +46,7 @@ mvn clean install
 java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
 ```
 
-You can then access petclinic here: http://localhost:8089/
+You can then access link here: http://localhost:8089/
 
 Or you can run it from Maven directly using the Spring Boot Maven plugin.
 
