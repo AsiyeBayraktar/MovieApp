@@ -48,14 +48,15 @@ java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
 
 You can then access link here: http://localhost:8089/  
 
-Sign In:\
+**Sign In:**\
+
 For Admin :\
 Username : admin\
-password : admin\
+password : admin
 
 For User:\
 Username : user\
-password : user\
+password : user
 
 Or you can run it from Maven directly using the Spring Boot Maven plugin.
 
