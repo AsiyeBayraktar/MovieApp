@@ -14,14 +14,14 @@
 
 ##  MySQL Tables:
 
- `users` :    (primary key)  user_id , username, password , enabled /
- `roles` :   (primary key) role_id, name /
- `users_roles` : (primary key) user_id, (foreign key) role_id
+ `users` :    (primary key)  user_id , username, password , enabled\
+ `roles` :   (primary key) role_id, name\
+ `users_roles` : (primary key) user_id, (foreign key) role_id\
  
 
  Permission Details: /
- ADMIN  :    View, Create,Edit and Delete Movies and Actors \
- USER   :    View , Edit and Create Movies and Actors /
+ ADMIN  :    View, Create,Edit and Delete Movies and Actors\
+ USER   :    View , Edit and Create Movies and Actors\
  
  
   There can be more than one actor in a movie.
@@ -46,7 +46,16 @@ mvn clean install
 java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
 ```
 
-You can then access link here: http://localhost:8089/
+You can then access link here: http://localhost:8089/  
+
+Sign In:\
+For Admin :\
+Username : admin\
+password : admin\
+
+For User:\
+Username : user\
+password : user\
 
 Or you can run it from Maven directly using the Spring Boot Maven plugin.
 
