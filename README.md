@@ -48,13 +48,13 @@ java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
 
 You can then access link here: http://localhost:8089/  
 
-**Sign In:**\
+**Sign In:**
 
-For Admin :\
+*For Admin :\
 Username : admin\
 password : admin
 
-For User:\
+*For User:\
 Username : user\
 password : user
 
