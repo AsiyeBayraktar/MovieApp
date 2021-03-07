@@ -35,7 +35,18 @@
 ## Installation
 
 
-Install the zip file.
+Download the zip file./
+
+You can build a jar file and run it from the command line:
+
+```sh
+mvn clean install
+```
+```sh
+java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
+```
+Or you can run it from Maven directly using the Spring Boot Maven plugin.
+
 
 ```sh
 mvn spring-boot:run
