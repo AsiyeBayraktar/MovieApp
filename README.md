@@ -20,14 +20,14 @@
  
 
  Permission Details: /
- ADMIN  :    View, Create,Edit and Delete Movies and Actors /
+ ADMIN  :    View, Create,Edit and Delete Movies and Actors \
  USER   :    View , Edit and Create Movies and Actors /
  
  
   There can be more than one actor in a movie.
  So used **One-To-Many**  relationship between movie and actor table.
  
-  `actor` :    (primary key)  id , name, role , (foreign key) movie_id/
+  `actor` :    (primary key)  id , name, role , (foreign key) movie_id\
    `movie` :    (primary key)  id ,name, year, type, explanation, media, language
    
 
