@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html html xmlns:th="http://www.thymeleaf.org"
+			xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container text-center ">
+        <a class="navbar-brand" href="/">Movie App</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse center " >
+        	<div sec:authorize="isAuthenticated()" style="color:white">
+			Welcome    <span sec:authentication="name">  Username</span></b>
+			&nbsp;
+			<span sec:authentication = "principal.authorities">Role</span>
+		</div>
+        
+        
+        <div class="collapse navbar-collapse center " >
+            <ul class="navbar-nav ml-auto " style="margin:auto">
+                <li class="nav-item  p-3">
+                    <a class="nav-link"  th:href="@{/movies}">List Movies
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                
+                <li class="nav-item  p-3 ">
+                    <a class ="nav-link" th:href="@{/movies/new}">Create Movies</a>
+                </li>
+                
+                <li class="nav-item  p-3 ">
+                    <a class ="nav-link" th:href="@{/actors}">List Actors</a>
+                </li>
+                
+                
+                <li class="nav-item  p-3 ">
+                    <a class ="nav-link" th:href="@{/actors/new}">Create Actors</a>
+                </li>
+                
+                
+                <li class="nav-item  p-3 ">
+                    <a class ="nav-link" th:href="@{/movies/search}">Search</a>
+                </li>
+                           
+            </ul>
+        </div>
+        
+        <div class="collapse navbar-collapse center " >
+                <form th:action="@{/logout}" method="post">
+					<input type="submit" value="Logout" />
+				</form>
+		</div>
+        
+        
+    </div>
+</nav>
+
+
+
+<div class="container text-center">
+	<div><h1>Search</h1></div>
+	
+	
+		<form  th:action="@{/movies/search}" method="get" class="input-group">
+    <input class="form-control form-control-dark" type="text" placeholder="Search by movi name, type or actor" name="search" aria-label="Search" required>
+    <div class="input-group-append">
+        <button class="btn btn-primary" value="Search">Search</button>
+    </div>
+</form>
+
+</br></br>
+	
+	<div>
+		<table class="table table-bordered">
+			<thead class="thead-dark">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Year</th>
+				<th>Type</th>
+				<th>Explanation</th>
+				<th>Media</th>
+				<th>Language</th>
+				<th>Actors</th>
+			
+			</tr>
+			</thead>
+			
+			<tbody>
+				<th:block th:each="movie : ${searchMovie}">
+				<tr>
+					<td>[[${movie.id}]]</td>
+					<td>[[${movie.name}]]</td>
+					<td>[[${movie.year}]]</td>
+					<td>[[${movie.type}]]</td>
+					<td>[[${movie.explanation}]]</td>
+					<td>[[${movie.media}]]</td>
+					<td>[[${movie.language}]]</td>
+					<td>[[${movie.actors}]]</td>
+			</tr>
+				
+				</th:block>
+			
+			</tbody>
+		
+		</table>
+	
+	</div>
+	
+</div>
+</html>
