@@ -50,13 +50,13 @@ You can then access link here: http://localhost:8089/
 
 **Sign In:**
 
-*For Admin :*\
-Username : admin\
-password : admin
+For Admin :\
+Username : *admin*\
+password : *admin*
 
-*For User:\
-Username : user\
-password : user
+For User:\
+Username : *user*\
+password : *user*
 
 Or you can run it from Maven directly using the Spring Boot Maven plugin.
 
