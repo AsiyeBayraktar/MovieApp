@@ -35,7 +35,7 @@
 ## Installation
 
 
-Download the zip file./
+Download the zip file.
 
 You can build a jar file and run it from the command line:
 
@@ -45,6 +45,9 @@ mvn clean install
 ```sh
 java -jar target/MovieApp-0.0.1-SNAPSHOT.jar
 ```
+
+You can then access petclinic here: http://localhost:8089/
+
 Or you can run it from Maven directly using the Spring Boot Maven plugin.
 
 
