@@ -50,7 +50,7 @@ You can then access link here: http://localhost:8089/
 
 **Sign In:**
 
-*For Admin :\
+*For Admin :*\
 Username : admin\
 password : admin
 
